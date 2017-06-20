@@ -47,36 +47,30 @@ class Application(Frame):
 		self.percentageButton.grid(row=2, column=4, sticky="NWNESWSE")
 
 #This is the Third Row
-		self.Button = Button(self, font=("Helvetica", 11), text="7", borderwidth=1)
-		self.sevenButton.grid(row=1, column=0, sticky="NWNESWSE")
+		self.oneButton = Button(self, font=("Helvetica", 11), text="1", borderwidth=1)
+		self.oneButton.grid(row=3, column=0, sticky="NWNESWSE")
 
-		self.eightButton = Button(self, font=("Helvetica", 11), text="8", borderwidth=1)
-		self.eightButton.grid(row=1, column=1, sticky="NWNESWSE")
+		self.twoButton = Button(self, font=("Helvetica", 11), text="2", borderwidth=1)
+		self.twoButton.grid(row=3, column=1, sticky="NWNESWSE")
 
-		self.nineButton = Button(self, font=("Helvetica", 11), text="9", borderwidth=1)
-		self.nineButton.grid(row=1, column=2, sticky="NWNESWSE")
+		self.threeButton = Button(self, font=("Helvetica", 11), text="3", borderwidth=1)
+		self.threeButton.grid(row=3, column=2, sticky="NWNESWSE")
 
-		self.timesButton = Button(self, font=("Helvetica", 11), text="*", borderwidth=1)
-		self.timesButton.grid(row=1, column=3, sticky="NWNESWSE")
+		self.minusButton = Button(self, font=("Helvetica", 11), text="-", borderwidth=1)
+		self.minusButton.grid(row=3, column=3, sticky="NWNESWSE")
 
-		self.clearButton = Button(self, font=("Helvetica", 11), text="C", borderwidth=1)
-		self.clearButton.grid(row=1, column=4, sticky="NWNESWSE")
+		self.equalsButton = Button(self, font=("Helvetica", 11), text="=", borderwidth=1)
+		self.equalsButton.grid(row=3, column=4, sticky="NWNESWSE", rowspan=2)
 
 #This is the Fourth Row
-		self.sevenButton = Button(self, font=("Helvetica", 11), text="7", borderwidth=1)
-		self.sevenButton.grid(row=1, column=0, sticky="NWNESWSE")
+		self.zeroButton = Button(self, font=("Helvetica", 11), text="0", borderwidth=1)
+		self.zeroButton.grid(row=4, column=0, columnspan=2, sticky="NWNESWSE")
 
-		self.eightButton = Button(self, font=("Helvetica", 11), text="8", borderwidth=1)
-		self.eightButton.grid(row=1, column=1, sticky="NWNESWSE")
+		self.dotButton = Button(self, font=("Helvetica", 11), text=".", borderwidth=1)
+		self.dotButton.grid(row=4, column=2, sticky="NWNESWSE")
 
-		self.nineButton = Button(self, font=("Helvetica", 11), text="9", borderwidth=1)
-		self.nineButton.grid(row=1, column=2, sticky="NWNESWSE")
-
-		self.timesButton = Button(self, font=("Helvetica", 11), text="*", borderwidth=1)
-		self.timesButton.grid(row=1, column=3, sticky="NWNESWSE")
-
-		self.clearButton = Button(self, font=("Helvetica", 11), text="C", borderwidth=1)
-		self.clearButton.grid(row=1, column=4, sticky="NWNESWSE")
+		self.plusButton = Button(self, font=("Helvetica", 11), text="+", borderwidth=1)
+		self.plusButton.grid(row=4, column=3, sticky="NWNESWSE")
 
 
 app = Application(calculator).grid()		
