@@ -22,6 +22,9 @@ class Application(Frame):
 		else:
 			self.display.insert(self.textLength, text)
 
+	def clearText(self):
+		self.replaceText("0")
+
 	def createWidgets(self):
 		self.display = Entry(self, font=("Helvetica", 16), borderwidth=0, relief=RAISED, justify=RIGHT)
 		self.display.insert(0, "0")
@@ -40,7 +43,7 @@ class Application(Frame):
 		self.timesButton = Button(self, font=("Helvetica", 11), text="*", borderwidth=0, command=lambda: self.appendToDisplay("*"))
 		self.timesButton.grid(row=1, column=3, sticky="NWNESWSE")
 
-		self.clearButton = Button(self, font=("Helvetica", 11), text="C", borderwidth=0)
+		self.clearButton = Button(self, font=("Helvetica", 11), text="C", borderwidth=0, command=lambda: self.clearText())
 		self.clearButton.grid(row=1, column=4, sticky="NWNESWSE")
 
 #This is the Second Row
@@ -72,7 +75,7 @@ class Application(Frame):
 		self.minusButton = Button(self, font=("Helvetica", 11), text="-", borderwidth=0, command=lambda: self.appendToDisplay("-"))
 		self.minusButton.grid(row=3, column=3, sticky="NWNESWSE")
 
-		self.equalsButton = Button(self, font=("Helvetica", 11), text="=", borderwidth=0, command=lambda: self.appendToDisplay("="))
+		self.equalsButton = Button(self, font=("Helvetica", 11), text="=", borderwidth=0, command=lambda: self.)
 		self.equalsButton.grid(row=3, column=4, sticky="NWNESWSE", rowspan=2)
 
 #This is the Fourth Row
