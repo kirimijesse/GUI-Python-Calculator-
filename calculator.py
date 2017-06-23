@@ -10,7 +10,7 @@ class Application(Frame):
 		self.createWidgets()
 
 	def createWidgets(self):
-		self.display = Entry(self, font=("Helvetica", 16), relief=RAISED, justify=RIGHT)
+		self.display = Entry(self, font=("Helvetica", 16), borderwidth=0, relief=RAISED, justify=RIGHT)
 		self.display.insert(0, "0")
 		self.display.grid(row=0, column=0, columnspan=5)
 
