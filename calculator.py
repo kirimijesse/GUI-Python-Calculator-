@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 
 calculator = Tk()
 calculator.title("CALCULATOR")
@@ -21,6 +22,16 @@ class Application(Frame):
 			self.replaceText(text)
 		else:
 			self.display.insert(self.textLength, text)
+
+	def calculateExpression(self):
+		self.expression = self.display.get()
+		self.expression = self.expression.replace("%", "/ 100")
+
+		try:
+			self.result = eval(self.expression)
+			self.replaceText(self.result)
+		except:
+			messagebox.showinfo("ERROR", "Invalid input", icon="warning", parent=calculator)
 
 	def clearText(self):
 		self.replaceText("0")
@@ -75,7 +86,7 @@ class Application(Frame):
 		self.minusButton = Button(self, font=("Helvetica", 11), text="-", borderwidth=0, command=lambda: self.appendToDisplay("-"))
 		self.minusButton.grid(row=3, column=3, sticky="NWNESWSE")
 
-		self.equalsButton = Button(self, font=("Helvetica", 11), text="=", borderwidth=0, command=lambda: self.)
+		self.equalsButton = Button(self, font=("Helvetica", 11), text="=", borderwidth=0, command=lambda: self.calculateExpression())
 		self.equalsButton.grid(row=3, column=4, sticky="NWNESWSE", rowspan=2)
 
 #This is the Fourth Row
