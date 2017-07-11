@@ -8,6 +8,8 @@
 * Clone the Repository on your Local Machine
 * Install Tkinter on Ubuntu (comes pre-installed on windows Python3)
 * Run the .py file 
+		
+		##### **OR**
 
 
 ## Built With
