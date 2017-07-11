@@ -23,7 +23,7 @@ class Application(Frame):
 		else:
 			self.display.insert(self.textLength, text)
 
-	def calculateExpression(self):
+	def calculateExpression(self):#python's calculate function 
 		self.expression = self.display.get()
 		self.expression = self.expression.replace("%", "/ 100")
 
@@ -33,7 +33,7 @@ class Application(Frame):
 		except:
 			messagebox.showinfo("ERROR", "Invalid input", icon="warning", parent=calculator)
 
-	def clearText(self):
+	def clearText(self):#clears imput on pressing C on Calculator
 		self.replaceText("0")
 
 	def createWidgets(self):
