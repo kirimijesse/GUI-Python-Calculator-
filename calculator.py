@@ -2,8 +2,9 @@ from tkinter import *
 from tkinter import messagebox
 
 calculator = Tk()
-calculator.title("CALCULATOR")
+calculator.title("CALCULATOR USING PYTHON")
 calculator.resizable(0, 1)#remove or change this in order to get different screen sizes
+
 
 class Application(Frame):
 	def __init__(self, master, *args, **kwargs):
